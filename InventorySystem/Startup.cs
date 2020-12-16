@@ -8,12 +8,13 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
+using InventorySystem.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using UdemyASP.NETCoreMVC3._1.DataAccess.Data;
+using InventorySystem.DataAccess.Data;
 
-namespace UdemyASP.NETCoreMVC3._1.InventorySystem
+namespace InventorySystem
 {
     public class Startup
     {
@@ -30,10 +31,9 @@ namespace UdemyASP.NETCoreMVC3._1.InventorySystem
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews()
-                .AddRazorRuntimeCompilation();
+            services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
