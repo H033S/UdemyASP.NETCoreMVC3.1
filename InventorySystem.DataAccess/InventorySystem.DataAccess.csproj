@@ -9,4 +9,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InventorySystem.Models\InventorySystem.Models.csproj" />
+    <ProjectReference Include="..\InventorySystem.Utilities\InventorySystem.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>
