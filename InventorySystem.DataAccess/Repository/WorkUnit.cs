@@ -10,11 +10,13 @@ namespace InventorySystem.DataAccess.Repository
     {
         private readonly ApplicationDbContext _db;
         public IWarehouseRepository Warehouse { get; }
+        public ICategoryRepository Category { get; }
 
         public WorkUnit(ApplicationDbContext db)
         {
             _db = db;
             Warehouse = new WarehouseRepository(_db); // Initializing
+            Category = new CategoryRepository(_db);
         }
 
         public void Save()
