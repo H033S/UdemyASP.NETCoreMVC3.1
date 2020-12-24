@@ -14,4 +14,8 @@
     <ProjectReference Include="..\InventorySystem.Utilities\InventorySystem.Utilities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+  </ItemGroup>
+
 </Project>
