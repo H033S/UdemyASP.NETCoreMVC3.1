@@ -12,7 +12,7 @@ namespace InventorySystem.Models
         
         [Required]
         [MaxLength(50)]
-        [Display(Name ="Nombre")]
+        [Display(Name ="Name")]
         public string Name { get; set; }
 
         [Required]
@@ -21,6 +21,7 @@ namespace InventorySystem.Models
         public string Description { get; set; }
 
         [Required]
+        [Display(Name ="State")]
         public bool State { get; set; }
     }
 }

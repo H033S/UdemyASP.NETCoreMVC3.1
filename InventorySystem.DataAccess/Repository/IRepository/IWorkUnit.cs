@@ -6,6 +6,7 @@ namespace InventorySystem.DataAccess.Repository.IRepository
 {
     public interface IWorkUnit:IDisposable
     {
+        IBrandRepository Brand { get; }
         IWarehouseRepository Warehouse { get; }
         ICategoryRepository Category { get; }
 

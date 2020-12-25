@@ -12,11 +12,14 @@ namespace InventorySystem.DataAccess.Repository
         public IWarehouseRepository Warehouse { get; }
         public ICategoryRepository Category { get; }
 
+        public IBrandRepository Brand { get; }
+
         public WorkUnit(ApplicationDbContext db)
         {
             _db = db;
             Warehouse = new WarehouseRepository(_db); // Initializing
             Category = new CategoryRepository(_db);
+            Brand = new BrandRepository(_db);
         }
 
         public void Save()
