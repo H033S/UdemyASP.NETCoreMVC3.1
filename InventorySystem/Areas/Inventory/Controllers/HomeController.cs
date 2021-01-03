@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using InventorySystem.DataAccess.Repository.IRepository;
+using InventorySystem.Models;
 using InventorySystem.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -13,15 +15,18 @@ namespace InventorySystem.Areas.Inventory.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IWorkUnit _workUnit;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IWorkUnit workUnit)
         {
             _logger = logger;
+            _workUnit = workUnit;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Product> products = _workUnit.Product.GetAll();
+            return View(products);
         }
 
         public IActionResult Privacy()

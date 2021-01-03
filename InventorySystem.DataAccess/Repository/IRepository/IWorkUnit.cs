@@ -9,6 +9,7 @@ namespace InventorySystem.DataAccess.Repository.IRepository
         IBrandRepository Brand { get; }
         IWarehouseRepository Warehouse { get; }
         ICategoryRepository Category { get; }
+        IProductRepository Product { get; }
 
         void Save();
     }

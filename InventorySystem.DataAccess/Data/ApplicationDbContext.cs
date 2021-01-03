@@ -17,5 +17,8 @@ namespace InventorySystem.DataAccess.Data
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<UserApp> Users { get; set; }
+
     }
 }

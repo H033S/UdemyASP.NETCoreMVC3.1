@@ -9,6 +9,12 @@
     <Compile Remove="Migrations\20201224183547_CateoryModel Addd.Designer.cs" />
     <Compile Remove="Migrations\20201224183758_Category Added.cs" />
     <Compile Remove="Migrations\20201224183758_Category Added.Designer.cs" />
+    <Compile Remove="Migrations\20201224220916_Brand Added.cs" />
+    <Compile Remove="Migrations\20201224220916_Brand Added.Designer.cs" />
+    <Compile Remove="Migrations\20201225141616_Products Added.cs" />
+    <Compile Remove="Migrations\20201225141616_Products Added.Designer.cs" />
+    <Compile Remove="Migrations\20201225141852_Products Added.cs" />
+    <Compile Remove="Migrations\20201225141852_Products Added.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
